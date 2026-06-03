@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" role="img" aria-label="Red team flow">
+  <defs>
+    <style>
+      .step { fill: #251b3f; stroke: #ff7a59; stroke-width: 2; rx: 8; }
+      .alt  { fill: #1a2244; stroke: #5ac8fa; stroke-width: 2; rx: 8; }
+      .lbl { font-family: ui-monospace, Menlo, monospace; font-size: 13px; fill: #e8eefc; text-anchor: middle; }
+      .sub { font-family: ui-sans-serif, Inter, system-ui; font-size: 11px; fill: #9aa6cf; text-anchor: middle; }
+      .arr { stroke: #ffb44a; stroke-width: 2; fill: none; marker-end: url(#m); }
+      .hdr { font-family: ui-sans-serif, Inter, system-ui; font-size: 18px; font-weight: 700; fill: #e8eefc; text-anchor: middle; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ffb44a"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="440" fill="#0b1020"/>
+  <text x="500" y="36" class="hdr">Red-Team Mode — objective-driven flow</text>
+
+  <rect x="40" y="80"  width="160" height="60" class="step"/>
+  <text x="120" y="108" class="lbl">/surface mode=redteam</text>
+  <text x="120" y="128" class="sub">load redteam-mindset</text>
+
+  <rect x="240" y="80" width="160" height="60" class="step"/>
+  <text x="320" y="108" class="lbl">/recon depth=light</text>
+  <text x="320" y="128" class="sub">no nuclei; passive</text>
+
+  <rect x="440" y="80" width="160" height="60" class="step"/>
+  <text x="520" y="108" class="lbl">/intel</text>
+  <text x="520" y="128" class="sub">CVE + appliance fingerprint</text>
+
+  <rect x="640" y="80" width="160" height="60" class="step"/>
+  <text x="720" y="108" class="lbl">/hunt</text>
+  <text x="720" y="128" class="sub">parallel hunt-* classes</text>
+
+  <rect x="840" y="80" width="140" height="60" class="step"/>
+  <text x="910" y="108" class="lbl">/chain</text>
+  <text x="910" y="128" class="sub">to objective</text>
+
+  <path d="M200 110 L240 110" class="arr"/>
+  <path d="M400 110 L440 110" class="arr"/>
+  <path d="M600 110 L640 110" class="arr"/>
+  <path d="M800 110 L840 110" class="arr"/>
+
+  <!-- background IR detection -->
+  <rect x="40" y="200" width="280" height="60" class="alt"/>
+  <text x="180" y="228" class="lbl">mid-engagement-ir-detection</text>
+  <text x="180" y="248" class="sub">poll baseline every 30 min</text>
+
+  <rect x="360" y="200" width="280" height="60" class="alt"/>
+  <text x="500" y="228" class="lbl">credential reuse playbook</text>
+  <text x="500" y="248" class="sub">test discovered creds across 18 services</text>
+
+  <rect x="680" y="200" width="280" height="60" class="alt"/>
+  <text x="820" y="228" class="lbl">payload-discipline (always on)</text>
+  <text x="820" y="248" class="sub">refuse destructive; minimal blast</text>
+
+  <!-- deliverable -->
+  <rect x="320" y="320" width="360" height="80" class="step"/>
+  <text x="500" y="352" class="lbl">/report platform=client</text>
+  <text x="500" y="372" class="sub">exec summary · narrative · matrix</text>
+  <text x="500" y="390" class="sub">redteam-report-template</text>
+</svg>

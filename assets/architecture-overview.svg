@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-label="Architecture overview">
+  <defs>
+    <style>
+      .box { fill: #1a2244; stroke: #5ac8fa; stroke-width: 2; rx: 8; }
+      .box-skill { fill: #1c2a52; stroke: #ffb44a; }
+      .box-cmd   { fill: #251b3f; stroke: #ff7a59; }
+      .box-script{ fill: #1f3a32; stroke: #6ad28a; }
+      .lbl  { font-family: ui-monospace, Menlo, monospace; font-size: 13px; fill: #e8eefc; }
+      .lbl-sm { font-family: ui-monospace, Menlo, monospace; font-size: 11px; fill: #9aa6cf; }
+      .title{ font-family: ui-sans-serif, Inter, system-ui; font-size: 18px; font-weight: 700; fill: #e8eefc; }
+      .arr  { stroke: #7e8ab0; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7e8ab0"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="620" fill="#0b1020"/>
+  <text x="500" y="40" text-anchor="middle" class="title">Claude Bug Hunter — Architecture</text>
+
+  <rect x="60"  y="80"  width="200" height="60" class="box" rx="8"/>
+  <text x="160" y="105" text-anchor="middle" class="lbl">User (operator)</text>
+  <text x="160" y="125" text-anchor="middle" class="lbl-sm">natural language + slash cmds</text>
+
+  <rect x="380" y="80"  width="240" height="60" class="box" rx="8"/>
+  <text x="500" y="105" text-anchor="middle" class="lbl">Claude Code</text>
+  <text x="500" y="125" text-anchor="middle" class="lbl-sm">keyword-driven skill loader</text>
+
+  <rect x="740" y="80"  width="200" height="60" class="box box-script" rx="8"/>
+  <text x="840" y="105" text-anchor="middle" class="lbl">scripts/cbh.py</text>
+  <text x="840" y="125" text-anchor="middle" class="lbl-sm">CLI harness (subset)</text>
+
+  <path d="M260 110 L380 110" class="arr"/>
+  <path d="M260 130 L740 130" class="arr"/>
+
+  <rect x="40"  y="220" width="250" height="320" class="box box-skill" rx="8"/>
+  <text x="165" y="245" text-anchor="middle" class="lbl">skills/  (51 SKILL.md)</text>
+  <text x="60" y="275" class="lbl-sm">hunt-* (28)</text>
+  <text x="60" y="295" class="lbl-sm">m365-entra, okta, vpn, sharepoint,</text>
+  <text x="60" y="310" class="lbl-sm">vcenter, exchange  (6 enterprise)</text>
+  <text x="60" y="335" class="lbl-sm">triage-validation, scope-discipline,</text>
+  <text x="60" y="350" class="lbl-sm">evidence-hygiene, payload-discipline,</text>
+  <text x="60" y="365" class="lbl-sm">redteam-mindset, mid-eng-ir-detection</text>
+  <text x="60" y="390" class="lbl-sm">h1, bugcrowd, intigriti, immunefi,</text>
+  <text x="60" y="405" class="lbl-sm">report-writing, redteam-report</text>
+  <text x="60" y="430" class="lbl-sm">offensive-osint (+14 refs, secret_scan.py)</text>
+  <text x="60" y="450" class="lbl-sm">recon-stack, surface-mapping</text>
+  <text x="60" y="475" class="lbl-sm">web3-audit, llm-attack, llm-ato</text>
+
+  <rect x="375" y="220" width="250" height="200" class="box box-cmd" rx="8"/>
+  <text x="500" y="245" text-anchor="middle" class="lbl">commands/  (14 slash cmds)</text>
+  <text x="395" y="275" class="lbl-sm">/surface  /recon  /intel  /hunt</text>
+  <text x="395" y="295" class="lbl-sm">/chain  /triage  /validate  /report</text>
+  <text x="395" y="315" class="lbl-sm">/token-scan  /autopilot  /pickup</text>
+  <text x="395" y="335" class="lbl-sm">/memory-gc  /remember  /web3-audit</text>
+
+  <rect x="710" y="220" width="250" height="200" class="box box-script" rx="8"/>
+  <text x="835" y="245" text-anchor="middle" class="lbl">scripts/</text>
+  <text x="730" y="275" class="lbl-sm">cbh.py — CLI harness</text>
+  <text x="730" y="295" class="lbl-sm">refresh-cve-index.py — NVD fetcher</text>
+  <text x="730" y="315" class="lbl-sm">secret_scan.py — 50+ regex patterns</text>
+  <text x="730" y="335" class="lbl-sm">install.sh — symlink installer</text>
+  <text x="730" y="355" class="lbl-sm">hunt.sh — engagement scaffold</text>
+
+  <rect x="375" y="440" width="250" height="120" class="box" rx="8"/>
+  <text x="500" y="465" text-anchor="middle" class="lbl">engagement/  (per target)</text>
+  <text x="395" y="490" class="lbl-sm">scope.md  recon-notes.md  chains.md</text>
+  <text x="395" y="510" class="lbl-sm">findings/  evidence/  baseline/</text>
+
+  <path d="M500 140 L500 220" class="arr"/>
+  <path d="M165 540 L165 580" class="arr" stroke-dasharray="4 3"/>
+  <path d="M500 420 L500 440" class="arr"/>
+  <path d="M835 420 L835 580" class="arr" stroke-dasharray="4 3"/>
+  <path d="M500 560 L500 580" class="arr"/>
+
+  <text x="500" y="600" text-anchor="middle" class="lbl">disk artifacts: engagement files (md, HAR, screenshots)</text>
+</svg>

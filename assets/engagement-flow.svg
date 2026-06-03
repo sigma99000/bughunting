@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-label="Engagement flow">
+  <defs>
+    <style>
+      .step { fill: #1a2244; stroke: #5ac8fa; stroke-width: 2; rx: 8; }
+      .lbl { font-family: ui-monospace, Menlo, monospace; font-size: 14px; fill: #e8eefc; text-anchor: middle; }
+      .sub { font-family: ui-sans-serif, Inter, system-ui; font-size: 11px; fill: #9aa6cf; text-anchor: middle; }
+      .arr { stroke: #ff7a59; stroke-width: 2; fill: none; marker-end: url(#m); }
+      .hdr { font-family: ui-sans-serif, Inter, system-ui; font-size: 18px; font-weight: 700; fill: #e8eefc; text-anchor: middle; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ff7a59"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="380" fill="#0b1020"/>
+  <text x="500" y="36" class="hdr">Engagement Flow — 7 phases</text>
+
+  <g>
+    <rect x="40"  y="100" width="120" height="60" class="step"/><text x="100" y="130" class="lbl">/surface</text><text x="100" y="148" class="sub">scaffold</text>
+    <rect x="190" y="100" width="120" height="60" class="step"/><text x="250" y="130" class="lbl">/recon</text><text x="250" y="148" class="sub">enum</text>
+    <rect x="340" y="100" width="120" height="60" class="step"/><text x="400" y="130" class="lbl">/intel</text><text x="400" y="148" class="sub">CVE matrix</text>
+    <rect x="490" y="100" width="120" height="60" class="step"/><text x="550" y="130" class="lbl">/hunt</text><text x="550" y="148" class="sub">vuln test</text>
+    <rect x="640" y="100" width="120" height="60" class="step"/><text x="700" y="130" class="lbl">/chain</text><text x="700" y="148" class="sub">escalate</text>
+    <rect x="790" y="100" width="120" height="60" class="step"/><text x="850" y="130" class="lbl">/validate</text><text x="850" y="148" class="sub">7-Q gate</text>
+
+    <path d="M160 130 L190 130" class="arr"/>
+    <path d="M310 130 L340 130" class="arr"/>
+    <path d="M460 130 L490 130" class="arr"/>
+    <path d="M610 130 L640 130" class="arr"/>
+    <path d="M760 130 L790 130" class="arr"/>
+  </g>
+
+  <g>
+    <rect x="430" y="240" width="140" height="70" class="step"/>
+    <text x="500" y="270" class="lbl">/report</text>
+    <text x="500" y="290" class="sub">platform template</text>
+    <path d="M850 160 C 850 220, 600 220, 570 240" class="arr"/>
+  </g>
+
+  <text x="500" y="350" class="sub">scope-discipline, payload-discipline, and triage-validation are always loaded as guardrails</text>
+</svg>

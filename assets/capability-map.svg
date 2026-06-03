@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-label="Capability map">
+  <defs>
+    <style>
+      .b { stroke-width: 2; rx: 8; }
+      .hunt { fill: #1c2a52; stroke: #ffb44a; }
+      .ent  { fill: #251b3f; stroke: #ff7a59; }
+      .disc { fill: #1f3a32; stroke: #6ad28a; }
+      .rep  { fill: #2d1f3f; stroke: #c089ff; }
+      .rec  { fill: #1a3144; stroke: #5ac8fa; }
+      .new  { fill: #3a2d1f; stroke: #ffd166; }
+      .lbl { font-family: ui-sans-serif, Inter, system-ui; font-size: 11px; fill: #e8eefc; text-anchor: middle; }
+      .ttl { font-family: ui-sans-serif, Inter, system-ui; font-size: 14px; font-weight: 700; fill: #e8eefc; text-anchor: middle; }
+      .hdr { font-family: ui-sans-serif, Inter, system-ui; font-size: 18px; font-weight: 700; fill: #e8eefc; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1000" height="540" fill="#0b1020"/>
+  <text x="500" y="32" class="hdr">Capability Map — 51 skills, 5 clusters</text>
+
+  <!-- Hunt cluster -->
+  <rect x="20" y="60" width="600" height="240" class="b hunt"/>
+  <text x="320" y="80" class="ttl">hunt-* (28)</text>
+  <g class="lbl">
+    <text x="80" y="110">xss</text>     <text x="160" y="110">sqli</text>   <text x="240" y="110">ssrf</text>
+    <text x="320" y="110">oauth</text>  <text x="400" y="110">saml</text>   <text x="480" y="110">jwt</text>
+    <text x="560" y="110">graphql</text>
+    <text x="80" y="140">idor</text>    <text x="160" y="140">auth</text>   <text x="240" y="140">rce</text>
+    <text x="320" y="140">xxe</text>    <text x="400" y="140">ssti</text>   <text x="480" y="140">csrf</text>
+    <text x="560" y="140">redirect</text>
+    <text x="80" y="170">race</text>    <text x="160" y="170">cache</text>  <text x="240" y="170">smuggling</text>
+    <text x="320" y="170">deser</text>  <text x="400" y="170">path-trav</text> <text x="480" y="170">file-upload</text>
+    <text x="560" y="170">cors</text>
+    <text x="80" y="200">csp-bypass</text> <text x="160" y="200">lfi</text> <text x="240" y="200">nosql</text>
+    <text x="320" y="200">ldap</text>  <text x="400" y="200">cmdi</text> <text x="480" y="200">proto-poll</text>
+    <text x="560" y="200">mass-assign</text>
+  </g>
+
+  <!-- Enterprise -->
+  <rect x="640" y="60" width="340" height="240" class="b ent"/>
+  <text x="810" y="80" class="ttl">Enterprise platforms (6)</text>
+  <g class="lbl">
+    <text x="810" y="115">m365-entra-attack</text>
+    <text x="810" y="145">okta-attack</text>
+    <text x="810" y="175">enterprise-vpn-attack</text>
+    <text x="810" y="205">sharepoint-attack</text>
+    <text x="810" y="235">vcenter-attack</text>
+    <text x="810" y="265">exchange-attack</text>
+  </g>
+
+  <!-- Discipline -->
+  <rect x="20" y="320" width="380" height="200" class="b disc"/>
+  <text x="210" y="340" class="ttl">Discipline (6)</text>
+  <g class="lbl">
+    <text x="120" y="370">triage-validation</text> <text x="320" y="370">scope-discipline</text>
+    <text x="120" y="400">evidence-hygiene</text>  <text x="320" y="400">payload-discipline</text>
+    <text x="120" y="430">redteam-mindset</text>   <text x="320" y="430">mid-eng-ir-detection</text>
+  </g>
+
+  <!-- Reporting -->
+  <rect x="420" y="320" width="280" height="200" class="b rep"/>
+  <text x="560" y="340" class="ttl">Reporting (6)</text>
+  <g class="lbl">
+    <text x="560" y="370">h1-reporting</text>
+    <text x="560" y="395">bugcrowd-reporting</text>
+    <text x="560" y="420">intigriti-reporting</text>
+    <text x="560" y="445">immunefi-reporting</text>
+    <text x="560" y="470">report-writing</text>
+    <text x="560" y="495">redteam-report-template</text>
+  </g>
+
+  <!-- Recon + new -->
+  <rect x="720" y="320" width="260" height="200" class="b rec"/>
+  <text x="850" y="340" class="ttl">Recon + new horizons</text>
+  <g class="lbl">
+    <text x="850" y="370">offensive-osint (+14 refs)</text>
+    <text x="850" y="395">recon-stack</text>
+    <text x="850" y="420">surface-mapping</text>
+    <text x="850" y="450">web3-audit</text>
+    <text x="850" y="475">llm-attack</text>
+    <text x="850" y="500">llm-ato</text>
+  </g>
+</svg>
